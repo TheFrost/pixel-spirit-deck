@@ -1,12 +1,11 @@
-/* Main function, uniforms & utils */
 #ifdef GL_ES
 precision mediump float; 
 #endif
 
 uniform vec2 u_resolution; 
 
-#pragma glslify: coord = require(./utils.glsl)
-#pragma glslify: stroke = require(./utils.glsl)
+#pragma glslify: coord = require(./utils/coord.glsl)
+#pragma glslify: stroke = require(./utils/stroke.glsl)
 
 #define st coord(gl_FragCoord.xy, u_resolution)
 #define PI 3.141592653589793

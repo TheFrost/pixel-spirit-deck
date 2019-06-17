@@ -12,15 +12,4 @@ vec2 coord(in vec2 p, in vec2 u_resolution) {
   return p;
 }
 
-float stroke(float x, float s, float w) {
-  float d = step(s, x + w * .5) - step(s, x - w * .5);
-  return clamp(d, 0., 1.);
-}
-
-float circleSDF(vec2 st) {
-  return length(st - .5) * 2.;
-}
-
 #pragma glslify: export(coord)
-#pragma glslify: export(circleSDF)
-#pragma glslify: export(stroke)
