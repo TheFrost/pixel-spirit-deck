@@ -1,0 +1,11 @@
+{
+  "name": "pixel-spirit-deck",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "canvas-sketch": "^0.3.1",
+    "canvas-sketch-util": "^1.8.0",
+    "underscore": "^1.9.1"
+  }
+}
