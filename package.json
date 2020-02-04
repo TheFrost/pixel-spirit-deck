@@ -9,7 +9,11 @@
   "dependencies": {
     "canvas-sketch": "^0.3.1",
     "canvas-sketch-util": "^1.8.0",
+    "glslify": "^7.0.0",
     "underscore": "^1.9.1"
+  },
+  "scripts": {
+    "start": "canvas-sketch sketches/index.js"
   },
   "devDependencies": {
     "canvas-sketch-cli": "^1.5.4"

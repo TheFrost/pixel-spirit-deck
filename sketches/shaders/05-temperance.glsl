@@ -4,13 +4,13 @@ precision mediump float;
 
 uniform vec2 u_resolution; 
 
-#pragma glslify: coord = require(./utils/coord.glsl)
-#pragma glslify: stroke = require(./utils/stroke.glsl)
+#pragma glslify: coord = require(./utils/coord)
+#pragma glslify: stroke = require(./utils/stroke)
 
-#define st coord(gl_FragCoord.xy, u_resolution)
 #define PI 3.141592653589793
 
 void main() {
+  vec2 st = coord(gl_FragCoord.xy, u_resolution);
   vec3 color = vec3(0.0);
   float offset = cos(st.y * PI) * .15;
   color += stroke(st.x, .28 + offset, .1);
